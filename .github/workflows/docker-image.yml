@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - .github/workflows/docker.yml
+      - .github/workflows/docker-image.yml
       - 'Dockerfile'
 
 jobs:
   push_to_registry:
-  name: push docker image to the docker hub
+    name: push docker image to the docker hub
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repository
